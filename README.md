@@ -1,43 +1,46 @@
-# Simulasi Traffic Light 4 Sisi (Arduino)
+# Simulasi Traffic Light 4 Sisi (Arduino Uno)
 
-Proyek ini adalah simulasi sistem lampu lalu lintas empat simpang (Utara, Timur, Selatan, Barat) yang dikontrol menggunakan Arduino Uno. Rangkaian ini didesain dan disimulasikan menggunakan platform Tinkercad.
+Proyek ini merupakan simulasi sistem kendali lampu lalu lintas untuk empat persimpangan (Utara, Timur, Selatan, dan Barat). Sistem ini dirancang untuk bekerja secara otomatis dengan urutan searah jarum jam menggunakan papan pengembang Arduino Uno.
 
-## Fitur Sistem
-* **Sistem Otomatis (Looping):** Berjalan terus-menerus secara berulang.
-* **Rotasi Searah Jarum Jam:** Urutan penyalaan lampu hijau adalah Utara → Timur → Selatan → Barat.
-* **Kondisi Default:** Semua simpang berada dalam kondisi MERAH sebelum salah satu sisi diaktifkan.
-* **Durasi Lampu:**
-  * **Hijau:** Menyala konstan selama 5 detik.
-  * **Kuning:** Diberikan efek kedip 3 kali, dilanjutkan menyala konstan selama 2 detik.
-  * **Merah:** Menyala mengunci simpang saat simpang lain sedang aktif.
-* **Modular Code:** Kode dipisahkan menggunakan fungsi `aktifkanSimpang()` agar lebih bersih dan terstruktur.
-* **Safety Rule:** Sistem dikunci agar tidak ada lebih dari satu simpang yang menyala hijau di waktu bersamaan.
+## 🚀 Fitur Utama
+* **Otomatisasi Penuh:** Sistem berjalan terus-menerus dalam siklus perulangan (looping).
+* **Urutan Searah Jarum Jam:** Fase hijau berpindah dari Utara → Timur → Selatan → Barat.
+* **Keamanan Sistem:** Kondisi default semua merah sebelum siklus dimulai, memastikan tidak ada dua sisi yang hijau bersamaan.
+* **Manajemen Waktu Terukur:**
+  * **Lampu Hijau:** Aktif selama 5 detik.
+  * **Lampu Kuning:** Efek kedip 3 kali sebagai peringatan, dilanjutkan nyala statis 2 detik.
+  * **Lampu Merah:** Mengunci jalur segera setelah fase kuning selesai.
+* **Kode Modular:** Menggunakan fungsi `aktifkanSimpang()` untuk efisiensi dan kemudahan modifikasi.
 
-## Komponen
-* 1x Arduino Uno R3
-* 1x Breadboard
-* 4x LED Merah
-* 4x LED Kuning
-* 4x LED Hijau
-* 12x Resistor 220 $\Omega$
-* Kabel Jumper secukupnya
+## 🛠️ Komponen & Rangkaian
+Proyek ini dirancang **tanpa menggunakan breadboard** (koneksi langsung/point-to-point) untuk menyederhanakan fisik rangkaian.
 
-## Pemetaan Pin (Wiring)
-Semua katoda (kaki pendek) LED dihubungkan ke jalur Ground (GND) pada Arduino. Kaki anoda (kaki panjang) dihubungkan ke pin digital berikut melalui resistor:
+* **Kontroler:** 1x Arduino Uno R3
+* **Output:** 12x LED (4 Merah, 4 Kuning, 4 Hijau)
+* **Proteksi:** 12x Resistor 220 $\Omega$
+* **Koneksi:** Kabel jumper langsung dari Pin Digital ke Anoda LED, dan seluruh Katoda ke Ground (GND).
 
-| Simpang | LED Merah | LED Kuning | LED Hijau |
+## 📌 Pemetaan Pin
+| Sisi Persimpangan | Merah | Kuning | Hijau |
 | :--- | :---: | :---: | :---: |
 | **Utara** | Pin 2 | Pin 3 | Pin 4 |
 | **Timur** | Pin 5 | Pin 6 | Pin 7 |
 | **Selatan** | Pin 8 | Pin 9 | Pin 10 |
 | **Barat** | Pin 11 | Pin 12 | Pin 13 |
 
-## Cara Menjalankan Simulasi
-1. Clone atau unduh repository ini.
-2. Buka platform [Tinkercad Circuits](https://www.tinkercad.com/circuits).
-3. Rangkai komponen sesuai dengan tabel pemetaan pin di atas.
-4. Salin seluruh kode C++ yang ada di file utama ke dalam editor kode Tinkercad (pastikan memilih mode **Text**).
-5. Klik **Start Simulation** untuk melihat hasilnya.
+## 📂 Tautan Proyek
+Silakan akses dokumen pendukung proyek melalui tautan di bawah ini:
 
-## Author
-* **Muhammad Faizal Khabibi** (NIM: H1H024003)
+* **[Dokumentasi Laporan Proyek](./Laporan_Traffic_Light.md)** 
+* **[Simulasi Tinkercad](https://www.tinkercad.com/things/3dykEFx1dJe-tugas-4-sistem-mikrokontroler?sharecode=jpDS7q5yNyMZMf3m1gsSMSkO01bO0jVxLTmZGCBZfzU)** - (Tempelkan link sirkuit Tinkercad kamu di sini jika ada).
+
+## 📝 Cara Penggunaan
+1. Hubungkan komponen sesuai dengan pemetaan pin di atas.
+2. Pastikan semua kaki negatif (katoda) LED terhubung ke pin GND Arduino.
+3. Buka file `traffic_light_4sisi.ino` di Arduino IDE.
+4. Pilih Board "Arduino Uno" dan Port yang sesuai.
+5. Klik **Upload**.
+
+---
+**Disusun Oleh:**
+**Muhammad Faizal Khabibi** NIM: H1H024003
