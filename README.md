@@ -31,15 +31,9 @@ Proyek ini dirancang **tanpa menggunakan breadboard** (koneksi langsung/point-to
 ## 📂 Tautan Proyek
 Silakan akses dokumen pendukung proyek melalui tautan di bawah ini:
 
-* **[Dokumentasi Laporan Proyek](./Laporan_Traffic_Light.md)** 
-* **[Simulasi Tinkercad](https://www.tinkercad.com/things/3dykEFx1dJe-tugas-4-sistem-mikrokontroler?sharecode=jpDS7q5yNyMZMf3m1gsSMSkO01bO0jVxLTmZGCBZfzU)** - (Tempelkan link sirkuit Tinkercad kamu di sini jika ada).
+* **[Dokumentasi Laporan Proyek](https://drive.google.com/drive/folders/1pSC0NpsPdqnAISGQC3gtcf5hGjItNTsn?usp=sharing)** 
+* **[Simulasi Tinkercad](https://www.tinkercad.com/things/3dykEFx1dJe-tugas-4-sistem-mikrokontroler?sharecode=jpDS7q5yNyMZMf3m1gsSMSkO01bO0jVxLTmZGCBZfzU)**
 
-## 📝 Cara Penggunaan
-1. Hubungkan komponen sesuai dengan pemetaan pin di atas.
-2. Pastikan semua kaki negatif (katoda) LED terhubung ke pin GND Arduino.
-3. Buka file `traffic_light_4sisi.ino` di Arduino IDE.
-4. Pilih Board "Arduino Uno" dan Port yang sesuai.
-5. Klik **Upload**.
 
 ---
 **Disusun Oleh:**
